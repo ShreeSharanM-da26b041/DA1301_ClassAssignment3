@@ -33,7 +33,7 @@ def count_fair_managers(root: Optional[TreeNode]) -> int:
             rs, rn = dfs(node.right)
             total = node.salary + ls + rs
             size = 1 + ln + rn
-            if node.salary == total:
+            if node.salary == total//size:
                 x += 1
             return total, size
 
